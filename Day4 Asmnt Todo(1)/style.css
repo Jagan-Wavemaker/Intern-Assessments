@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 80%;
+    margin-top: 3%;
+    margin: auto;
+}
+ul{
+    margin: 0; 
+    padding: 0;
+}
+ul li{
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    font-size: 18px;
+    list-style: none;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 12px 8px 12px 40px;
+}
+ul li:nth-child(odd){
+    background: #f9f9f9;
+}
+ul li:hover{
+    background: #ddd;
+}
+ul li.checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    top: 10px;
+    left: 15px;
+    border-width: 0 2px 2px 0;/*For Tick Mark*/
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+.top-head{
+    background-color: #3682f4;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+.top-head:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+#inputtext{
+    border: none;
+    width: 75%;
+    padding: 2%;
+    float: left;
+    font-size: 18px;
+    border-radius: 0;
+    margin: 0;
+}
+.AddButton{
+    padding: 2%;
+    width: 20%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+}
+.AddButton:hover{
+    background-color: #bbb;
+}
+.taskcount{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application(js Assessment)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myheader" class="top-head">
+        <h2 style="margin-right: 13%;">List of todo tasks: <span style="color: rgb(87, 41, 41);" id="count">4</span></h2>
+        <div class="taskcount">
+           <h2>Pending Task: <span style="color: rgb(87, 41, 41);" id="pendingtask">2</span></h2>
+           <h2>Completed Task: <span style="color: rgb(87, 41, 41);" id="donetask">2</span></h2>
+        </div>
+        <div class="inputfields">
+            <input type="text" id="inputtext" placeholder="Title...">
+            <span onclick="newElement()" class="AddButton">add activity</span>
+        </div>
+    </div>
+    <ul id="ullist">
+
+    </ul>
+<script src="app.js"></script>
+</body>
+</html>

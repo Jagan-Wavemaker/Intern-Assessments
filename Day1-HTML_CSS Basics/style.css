@@ -1,0 +1,29 @@
+span{
+    color: red;
+}
+a:link {
+    color: rgb(21, 233, 38);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: rgb(232, 140, 155);
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    color: rgb(15, 168, 229);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+h3{
+    color: rgb(223, 135, 27);
+    text-decoration: underline;
+}
+.box{
+        background-color: rgba(205, 201, 201, 0.922);
+        width: auto;
+        border: 5px solid green;
+        padding: 5px;
+        margin: 10px;
+}
