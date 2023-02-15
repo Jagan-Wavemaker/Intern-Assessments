@@ -1,0 +1,52 @@
+Designing a database schema for Tinder Application
+Here my corner usecase is creating a user profile, matching with people basis on the swiping activity and there by starting a conversation.
+
+USER_PROFILE
+ userid(primary key)
+ username UNIQUE
+ details
+ anthem
+ phno
+ occupation
+ location
+ age
+ genderid(foreign key to gender table)
+
+GENDER
+ genderid(primary key)
+ gendertype
+
+INTERESTED_IN_GENDER
+ id(primary key)
+ userid (foreign key to userprofile table) UNIQUE
+ genderid (foreign key to gender table)
+
+REL_TYPE
+ relid(primary key)
+ name
+
+INTERESTED_IN_RELATION
+ id (primary key)
+ userid UNIQUE
+ relid (foreign key to REL_TYPE table)
+
+USER_MATCHING
+ id (primary key)
+ useridGiven (foreign key to userprofile table)
+ useridReceived (foreign key to userprofile table)
+ userSwipe
+
+CONVERSATION
+ id (primary key)
+ userid (foreign key to userprofile table)
+ startedTime
+ endedTime
+ msgText
+
+In this schema, the USER_PROFILE table stores information about each user, such as their name, bio details, gender, age, location, occupation, and genderid as foreign key.
+                the GENDER table stores its id and says the gender type of each user like male or female.
+		    the INTERESTED_IN_GENDER stores the genderid of each user and facilitates the interest of user.
+		    the RELATION_TYPE stores its id and name of some sample relations like casual date, new friends.
+		    the INTERESTED_IN_RELATION stores userid and relid.The user will select the relationship type they are interested in. For each type they choose, we’ll store one record in the INTERESTED_IN_RELATION table.
+		    the USER_MATCHING stores id and also information about each match between two users.A useridGiven, a useridReceived, userSwipe tells yes or no in which yes mean liked and no mean disliked.
+		    the CONVERSATION stores userid, startedtime, endedtime and message content of users.
