@@ -52,6 +52,7 @@ public class votingSystem {
             String nomineeName = input.next();
             String nomineeID = input.next();
             String key = nomineeName + " (" + nomineeID + ")";
+            // containskey used to check whether a particular key is being mapped into the HashMap or not
             if (nominees.containsKey(key)) {
                 nominees.put(key, nominees.get(key) + 1);
                 System.out.println("User " + user + " voted for " + nomineeName + " (" + nomineeID + ")");
