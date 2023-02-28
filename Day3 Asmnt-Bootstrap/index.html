@@ -18,7 +18,7 @@
     <header>
           <nav class="navbar navbar-inverse">
             <div class="col-sm-3 brand">
-                <a style="text-decoration: none; color: white;" href="#">BRAND.</a>
+                <a style="text-decoration: none; color: white; font-weight: bolder;" href="#">BRAND.</a>
             </div>
 
             <div class="col-sm-6">
@@ -38,9 +38,9 @@
     </header>
     <section style="background-color:rgb(41, 41, 65);">
         <div class="container">
-        <div class="col-sm-6">
+        <div style="margin-right: 20px;" class="col-sm-6">
             <h2 style="padding-top: 15px;">Brand Business with reliable strategies</h2>
-            <p style="text-align: center; padding: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p style="padding: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam.
             </p>
             <button type="submit" class="button">View Project</button>
@@ -58,7 +58,7 @@
         </div> -->
         <div class="row1">
             <h4>SERVICES</h4>
-            <h5 style="font-weight: bold;">Effective services <br>for various destinations</h5>
+            <h5>Effective services <br>for various destinations</h5>
         </div>
         <!-- <div class="col-sm-3">
         </div> -->
@@ -86,15 +86,15 @@
         </div>
     </div>
     <div class="row  get-started">
-        <button type="button" class="button">Get Started</button>
+        <button style="font-weight: bolder; color: aqua;" type="button" class="button">Get Started</button>
     </div> 
     </section>
     <section>
         <div class="container rows">
         <div class="row">
-            <div class="row1">
-                <h4>PRESENTATION</h4>
-                <h5 style="font-weight: bold;">Works That We Done Recently</h5>
+            <div style="margin-top: 30px;" class="row1">
+                <h4 style="font-weight: bold; margin-left: 20px; color: aqua;">PRESENTATION</h4>
+                <h5 style="font-weight: bold; font-size: xx-large;">Works That We Done Recently</h5>
             </div>
                 <div class="row">
                     <div style="text-align: center;" class="col-sm-4">
@@ -136,8 +136,8 @@
     <section>
         <div class="container">
             <div class="row1">
-                <h4>OUR TEAM</h4>
-                <h5 style="font-weight: bold;">Team of Specialists</h5>
+                <h4 style="color: aqua;">OUR TEAM</h4>
+                <h5 style="font-weight: bolder; font-size: xx-large;">Team of Specialists</h5>
             </div>
             <div class="row card" id="card">
                 <div class="col-sm-3">
@@ -164,7 +164,7 @@
     </div>
     </section>
     <div class="row1">
-            <h4>CUSTOMER SAYS</h4>
+            <h4 style="color: aqua;">CUSTOMER SAYS</h4>
             <h5 style="font-weight: bold;">Our Satisfied Customer Says</h5>
     </div>
     <!-- Poster-cards -->
@@ -176,8 +176,8 @@
         <!-- style="margin-top: 50px; font-family: monospace; padding: 30px;  margin-bottom: 30px;"  -->
         <div style="margin-right: 10px; border-radius: 4px; background-color: white;" class="col-sm-4 poster">
             <div style="display: flex; padding: 25px;" class="row posterleft">
-            <img src="./images/card-img1.png" class="img-circle"  width="104" height="96">
-            <h3>Linda Black<br><span style="text-align: left;">HR</span></h3>
+            <img style="object-fit: cover;" src="./images/card-img1.png" class="img-circle"  width="104" height="96">
+            <h3>Linda Black<br><span style="text-align: left; font-size: small;">HR</span></h3>
             <ul>
             <li style="float: right;" class="stars">
                 <span class="glyphicon glyphicon-star-empty" style="color:orange;"></span>
@@ -193,8 +193,8 @@
 
         <div style="margin-left: 10px; border-radius: 4px; background-color: white;" class="col-sm-4 poster">
             <div style="display: flex; padding: 25px;" class=" row posterright">
-            <img src="./images/card-img3.png" class="img-circle"  width="104" height="96">
-            <h3>Linda Black<br><span style="text-align: left;">HR</span></h3>
+            <img style="object-fit: cover;" src="./images/card-img3.png" class="img-circle"  width="104" height="96">
+            <h3>Ben Orange<br><span style="text-align: left; font-size: small;">Web Developer</span></h3>
             <ul>
             <li style="float: right;" class="stars">
                 <span class="glyphicon glyphicon-star-empty" style="color:orange;"></span>
@@ -280,17 +280,37 @@
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
         </div>
-        <div style="margin-left: 70px;" class="col-sm-1 copyright">
-            <button type="button" class="btn btn-floating btn-lg" >
-                <i class="fa fa-chevron-up" aria-hidden="true"></i>
-            </button>
+        <div class="col-sm-2">
+            <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
         </div>
-        <div class="col-sm-1"></div>
     </footer>
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <!-- Include all compiled plugins (below), or include individual files as needed -->
  <script src="js/bootstrap.min.js"></script>
+ <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+ </script>
 </body>
 
 </html>
